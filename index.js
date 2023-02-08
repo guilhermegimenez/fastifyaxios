@@ -9,7 +9,7 @@ const axios = require('axios')
 //   config,
 // }
 
-function decorateAxiosPlugin(fastify, client, name) {
+function decorateAxiosPlugin (fastify, client, name) {
   if (name) {
     if (!fastify.axios) {
       fastify.decorate('axios', axios)
@@ -22,7 +22,7 @@ function decorateAxiosPlugin(fastify, client, name) {
   }
 }
 
-async function fastifyAxios(fastify, options) {
+async function fastifyAxios (fastify, options) {
   const { name, config, client } = options
 
   if (!fastify.axios) {
